@@ -24,12 +24,22 @@ hasil_not = not is_lulus
 print("Hasil:", hasil_and)
 print("Hasil or:", hasil_or)
 print("Hasil not:", hasil_not)
-
+syarat_predikat = (nilai_akhir > 85) and (nilai_kehadiran > 90) and (nilai_akhir % 2 == 0)
+syarat_lulus = (nilai_akhir > 75) and (nilai_kehadiran > 80)
+if syarat_predikat:
+    status = "Lulus dengan predikat"
+elif syarat_lulus:
+    status = "Lulus"
+else:
+    status = "Belum Lulus"
 #
 print("========ekspresi========")
 print("ekspresi 1:", memiliki_predikat_minimum and memiliki_hadir_cukup)
 print("ekspresi 2:", memiliki_lulus_minimum or memiliki_nilai_kurang)
 print("ekspresi 3:", nilai_kehadiran >= 80 and nilai_akhir > 75)
+# output hasil
+print("Nilai Akhir :", nilai_akhir)
+print("Status :", status)
 
 
     
